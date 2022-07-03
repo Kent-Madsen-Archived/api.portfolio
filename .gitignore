@@ -1,0 +1,29 @@
+# ban specific files
+package-lock.json
+
+# Ban extensions
+*.lock
+*.log
+*.cache
+
+# ban Files
+.editorconfig
+.env
+.env.backup
+
+# Ban this files within the code
+/code/*.xml
+/code/*.yml
+/code/*.example
+
+
+/code/node_modules/*
+/code/public/build/*
+/code/public/hot/*
+/code/public/storage/*
+
+/code/storage/*.key
+/code/vendor/*
+
+/.idea/*
+/.vscode/*

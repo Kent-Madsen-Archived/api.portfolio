@@ -1,0 +1,3 @@
+# ban specific files
+.htaccess
+*.txt
