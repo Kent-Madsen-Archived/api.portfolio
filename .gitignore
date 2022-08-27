@@ -17,6 +17,8 @@ package-lock.json
 /code/*.example
 
 
+.vagrant/*
+
 /code/node_modules/*
 /code/public/build/*
 /code/public/hot/*
