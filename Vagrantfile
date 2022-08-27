@@ -15,6 +15,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.provision "shell", inline: <<-SHELL
-
+  wget 'https://raw.githubusercontent.com/KentVejrupMadsen/Portfolio/development/scripts/processes/install.sh' -O './install.sh'
+  bash ./install.sh
   SHELL
 end
