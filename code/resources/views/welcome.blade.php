@@ -130,3 +130,10 @@
         </div>
     </body>
 </html>
+
+<?php 
+        use Illuminate\Support\Facades\Storage;
+        
+        $obj = Storage::url('1.jpg');
+        echo $obj;
+        ?>
