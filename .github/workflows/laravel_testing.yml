@@ -1,10 +1,8 @@
-name: Laravel-Testing
+name: Laravel Testing Functionality
 
 on:
-  push:
-    branches: [ "development" ]
   pull_request:
-    branches: [ "main", "testing", "publish" ]
+    branches: [ "testing", "publish" ]
 
 jobs:
   laravel-tests:
