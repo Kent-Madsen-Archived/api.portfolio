@@ -1,54 +1,57 @@
 name: Build Dependencies
 on:
+  push:
+    branches: [ "development" ]
   pull_request:
-    branches: [ "main" ]
-
+    branches: [ "publish" ]
 jobs:
   build_and_test:
     runs-on: ubuntu-latest
     steps:
+      # Setup PHP
+      - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
+        with:
+          php-version: '8.1'
+      # Setup of Repository
       - name: Checkout Repository
         uses: actions/checkout@v3
-      - name: build
+      #
+      - name: build dependencies
         run: |
           cd code
           npm install
           npm run build
-      - name: archive npm artefacts
+          composer install
+      # Cached artefacts for NodeJs
+      - name: upload artefact - npm build assets
         uses: actions/upload-artifact@v3
         with:
-          name: public assets
+          name: npm-build-assets
           path: |
             code/public/build/assets
-      - name: archive npm lockfile
+      - name: upload artefact - modules
         uses: actions/upload-artifact@v3
         with:
-          name: save npm lockfile
+          name: npm-modules
+          path: |
+            code/node_modules
+      - name: upload artefact - npm package files
+        uses: actions/upload-artifact@v3
+        with:
+          name: npm-package-files
           path: |
             code/package-lock.json
-      #
+            code/package.json
       # Cached Artefacts for PHP
       - name: archive production artefacts
         uses: actions/upload-artifact@v3
         with:
-          name: composer.lock
-          path: code/composer.lock
+          name: composer-package-files
+          path: | 
+            code/composer.json
+            code/composer.lock
       - name: archive vendor modules
         uses: actions/upload-artifact@v3
         with:
-          name: vendors
+          name: php-composer-vendors
           path: code/vendor
-      #
-      # Cache Artefacts for npm
-      - name: archive npm artefacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: js-builds
-          path: |
-            code/public/build/assets
-      - name: archive npm lockfile
-        uses: actions/upload-artifact@v3
-        with:
-          name: package-lock
-          path: |
-            code/package-lock.json
