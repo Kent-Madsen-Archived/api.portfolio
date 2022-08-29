@@ -1,8 +1,6 @@
 name: NPM - Compile
 
 on:
-  push:
-    branches: [ "development" ]
   pull_request:
     branches: [ "main", \
                 "testing", \
