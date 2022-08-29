@@ -1,0 +1,54 @@
+name: Build Dependencies
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: build
+        run: |
+          cd code
+          npm install
+          npm run build
+      - name: archive npm artefacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: public assets
+          path: |
+            code/public/build/assets
+      - name: archive npm lockfile
+        uses: actions/upload-artifact@v3
+        with:
+          name: save npm lockfile
+          path: |
+            code/package-lock.json
+      #
+      # Cached Artefacts for PHP
+      - name: archive production artefacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: composer.lock
+          path: code/composer.lock
+      - name: archive vendor modules
+        uses: actions/upload-artifact@v3
+        with:
+          name: vendors
+          path: code/vendor
+      #
+      # Cache Artefacts for npm
+      - name: archive npm artefacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: js-builds
+          path: |
+            code/public/build/assets
+      - name: archive npm lockfile
+        uses: actions/upload-artifact@v3
+        with:
+          name: package-lock
+          path: |
+            code/package-lock.json

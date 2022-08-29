@@ -2,33 +2,29 @@ name: Laravel Testing
 
 on:
   push:
-    branches: ["development"]
+    branches: [ "development" ]
   pull_request:
-    branches: [ "testing", "main" ]
+    branches: [ "testing" ]
 
 jobs:
   laravel-tests:
     runs-on: ubuntu-latest
-
     steps:
       - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
         with:
           php-version: '8.1'
       - uses: actions/checkout@v3
-      # Build & install node js packages
-      - name: build-js
+      # Build & install node js packages and PHP
+      - name: build-dependencies
         run: |
           cd code
           npm install
           npm run build
+          composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
       # Copy configuration files
       - name: Copy .env
         run: | 
           php -r "file_exists('.env') || copy('./configuration/.env.example', './code/.env');"
-      - name: Install Dependencies
-        run: |
-          cd code 
-          composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
       - name: Generate key
         run: |
           cd code 
@@ -42,27 +38,3 @@ jobs:
           cp configuration/phpunit.xml code/phpunit.xml
           cd code
           php vendor/bin/phpunit
-      # Cached Artefacts for PHP
-      - name: archive production artefacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: composer.lock
-          path: code/composer.lock
-      - name: archive vendor modules
-        uses: actions/upload-artifact@v3
-        with:
-          name: vendors
-          path: code/vendor
-      # Cache Artefacts for npm
-      - name: archive npm artefacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: js-builds
-          path: |
-            code/public/build/assets
-      - name: archive npm lockfile
-        uses: actions/upload-artifact@v3
-        with:
-          name: package-lock
-          path: |
-            code/package-lock.json
