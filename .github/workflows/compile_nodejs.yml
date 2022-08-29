@@ -31,4 +31,4 @@ jobs:
         with:
           name: save npm lockfile
           path: |
-            package-lock.json
+            *-lock.json

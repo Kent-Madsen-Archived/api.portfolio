@@ -23,4 +23,4 @@ jobs:
         with:
           name: composer lock file
           path: |
-            composer.lock
+            *.lock
