@@ -1,0 +1,34 @@
+name: NPM - Compile
+
+on:
+  push:
+    branches: [ "development" ]
+  pull_request:
+    branches: [ "main", \
+                "testing", \
+                "publish" ]
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: build
+        run: |
+          cd code
+          npm install
+          npm run build
+      - name: archive npm artefacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: public assets
+          path: |
+            code/public/build/assets
+
+      - name: archive npm lockfile
+        uses: actions/upload-artifact@v3
+        with:
+          name: save npm lockfile
+          path: |
+            code/package-lock.json
