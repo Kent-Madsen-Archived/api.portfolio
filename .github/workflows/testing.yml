@@ -15,30 +15,6 @@ jobs:
         with:
           php-version: '8.1'
       - uses: actions/checkout@v3
-      # Cached Artefacts for PHP
-      - name: archive production artefacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: composer.lock
-          path: code/composer.lock
-      - name: archive vendor modules
-        uses: actions/upload-artifact@v3
-        with:
-          name: vendors
-          path: code/vendor
-      # Cache Artefacts for npm
-      - name: archive npm artefacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: js-builds
-          path: |
-            code/public/build/assets
-      - name: archive npm lockfile
-        uses: actions/upload-artifact@v3
-        with:
-          name: package-lock
-          path: |
-            code/package-lock.json
       # Build & install node js packages
       - name: build-js
         run: |
@@ -66,3 +42,27 @@ jobs:
           cp configuration/phpunit.xml code/phpunit.xml
           cd code
           php vendor/bin/phpunit
+      # Cached Artefacts for PHP
+      - name: archive production artefacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: composer.lock
+          path: code/composer.lock
+      - name: archive vendor modules
+        uses: actions/upload-artifact@v3
+        with:
+          name: vendors
+          path: code/vendor
+      # Cache Artefacts for npm
+      - name: archive npm artefacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: js-builds
+          path: |
+            code/public/build/assets
+      - name: archive npm lockfile
+        uses: actions/upload-artifact@v3
+        with:
+          name: package-lock
+          path: |
+            code/package-lock.json
