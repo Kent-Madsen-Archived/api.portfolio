@@ -33,6 +33,7 @@ jobs:
           chmod -R 777 storage bootstrap/cache
       - name: Execute tests (Unit and Feature tests) via PHPUnit
         run: |
+          cp configuration/phpunit.xml code/phpunit.xml
           cd code
           ls -a
           php vendor/bin/phpunit
