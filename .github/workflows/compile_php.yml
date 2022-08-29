@@ -1,0 +1,26 @@
+name: PHP - Compile
+
+on:
+  push:
+    branches: [ "development" ]
+  pull_request:
+    branches: [ "main", \
+                "testing", \
+                "publish" ]
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: build
+        run: |
+          cd code
+          composer install
+      - name: archive production artefacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: composer lock file
+          path: |
+            code/composer.lock
