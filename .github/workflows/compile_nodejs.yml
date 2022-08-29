@@ -22,13 +22,13 @@ jobs:
       - name: archive npm artefacts
         uses: actions/upload-artifact@v3
         with:
-          name: dis
+          name: public assets
           path: |
-            public/build/assets
+            code/public/build/assets
 
       - name: archive npm lockfile
         uses: actions/upload-artifact@v3
         with:
           name: save npm lockfile
           path: |
-            *-lock.json
+            code/package-lock.json
