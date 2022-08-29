@@ -22,7 +22,7 @@ jobs:
       - name: Install Dependencies
         run: |
           cd code 
-          composer install -q --no-ansi --no-progress --prefer-dist
+          composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
       - name: Generate key
         run: | 
           cd code 
@@ -34,4 +34,5 @@ jobs:
       - name: Execute tests (Unit and Feature tests) via PHPUnit
         run: |
           cd code
+          ls -a
           php vendor/bin/phpunit
