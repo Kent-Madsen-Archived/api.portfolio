@@ -1,8 +1,6 @@
 name: PHP - Compile
 
 on:
-  push:
-    branches: [ "development" ]
   pull_request:
     branches: [ "main" ]
 
@@ -12,10 +10,6 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-      - name: build
-        run: |
-          cd code
-          composer install
       - name: archive production artefacts
         uses: actions/upload-artifact@v3
         with:
@@ -26,3 +20,7 @@ jobs:
         with:
           name: vendors
           path: code/vendor
+      - name: build
+        run: |
+          cd code
+          composer install
