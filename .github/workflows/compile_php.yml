@@ -1,4 +1,4 @@
-name: NPM Compile
+name: Composer Compile
 
 on:
   push:
@@ -17,18 +17,10 @@ jobs:
       - name: build
         run: |
           cd code
-          npm install
-          npm run build
-      - name: archive npm artefacts
+          composer install
+      - name: archive production artefacts
         uses: actions/upload-artifact@v3
         with:
-          name: dis
+          name: composer lock file
           path: |
-            public/build/assets
-
-      - name: archive npm lockfile
-        uses: actions/upload-artifact@v3
-        with:
-          name: save npm lockfile
-          path: |
-            package-lock.json
+            composer.lock
