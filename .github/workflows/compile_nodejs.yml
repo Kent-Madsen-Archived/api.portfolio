@@ -1,4 +1,4 @@
-name: NPM Compile
+name: NPM - Compile
 
 on:
   push:
