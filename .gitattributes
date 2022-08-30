@@ -2,6 +2,7 @@
 
 *.blade.php diff=html eol=lf
 
+*.scss diff=scss eol=lf
 *.css diff=css eol=lf
 *.html diff=html eol=lf
 *.md diff=markdown eol=crlf
