@@ -34,5 +34,17 @@
             return $this->route;
         }
 
+        //
+        public const c = BaseRoute::create;
+        public const create = 'create';
+
+        public const r = BaseRoute::retrieve;
+        public const retrieve = 'retrieve';
+
+        public const u = BaseRoute::update;
+        public const update = 'update';
+
+        public const d = BaseRoute::delete;
+        public const delete = 'delete';
     }
 ?>
