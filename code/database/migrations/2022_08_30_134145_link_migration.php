@@ -14,9 +14,12 @@
                 function ( Blueprint $table )
                 {
                     $table->id();
-                    $table->string('content')->unique();
-                    $table->json('attributes')->nullable();
 
+                    $table->string( 'content' )
+                          ->unique();
+
+                    $table->json( 'attributes' )
+                          ->nullable();
                 }
             );
         }
