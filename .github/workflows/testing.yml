@@ -14,8 +14,8 @@ jobs:
       - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
         with:
           php-version: '8.1'
-          extensions: intl, BCMath, ctype, fileinfo, mbstring, OpenSSL, pdo_mysql, tokenizer
-          tools: composer, phpunit, pecl, phpize, symfony
+          extensions: intl, BCMath, ctype, fileinfo, OpenSSL, pdo_mysql, tokenizer
+          tools: composer, phpunit, pecl, phpize
 
       - uses: actions/checkout@v3
       # Build & install node js packages and PHP
