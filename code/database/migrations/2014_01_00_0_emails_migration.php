@@ -7,10 +7,10 @@
     return new class extends Migration
     {
 
-        public function up()
+        public function up(): void
         {
             //
-            Schema::create( 'images',
+            Schema::create( 'emails',
                 function ( Blueprint $table )
                 {
                     $table->id();
@@ -20,10 +20,10 @@
         }
 
 
-        public function down()
+        public function down(): void
         {
             //
-            Schema::dropIfExists( 'images' );
+            Schema::dropIfExists( 'emails' );
         }
     };
 ?>
