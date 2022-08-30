@@ -19,8 +19,8 @@ jobs:
           php-version: '8.1'
           extensions: intl, BCMath, ctype, fileinfo, OpenSSL, pdo_mysql, tokenizer
           tools: composer, phpunit, pecl, phpize
-
       - uses: actions/checkout@v3
+      
       # Caching
       - name: cache vendors
         id: cache-vendors
