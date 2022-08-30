@@ -5,12 +5,34 @@
     use Illuminate\Support\Facades\Route;
 
 
+    /**
+      *
+      */
     class BaseRoute
     {
-        function __construct()
+        /**
+          * @param string|null $value
+          */
+        function __construct( ?string $value = null )
         {
-
+            $this->setRoute( $value );
         }
-    }
 
+        // Variables
+        private $route;
+
+
+        // Accessors
+        public final function getRoute(): ?string
+        {
+            return $this->route;
+        }
+
+        public final function setRoute( ?string $value ): ?string
+        {
+            $this->route = $value;
+            return $this->route;
+        }
+
+    }
 ?>
