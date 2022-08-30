@@ -20,7 +20,7 @@ jobs:
           extensions: intl, BCMath, ctype, fileinfo, OpenSSL, pdo_mysql, tokenizer
           tools: composer, phpunit, pecl, phpize
       - uses: actions/checkout@v3
-      
+
       # Caching
       - name: cache vendors
         id: cache-vendors
@@ -29,14 +29,22 @@ jobs:
           path: code/vendor
           key: ${{runner.os}}-php-vendors
 
-      - name: install vendor dependencies
+      - name: build-vendor-dependencies
         if: steps.cache-vendors.outputs.cache-hit != 'true'
         run: |
           cd code
           composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
-      # Build & install node js packages and PHP
-      - name: build-dependencies
+      - name: cache nodejs npm packages
+        id: cache-npm
+        uses: actions/cache@v3
+        with:
+          path: code/node_modules
+          key: ${{runner.os}}-nodejs-build
+
+      # Build & install node js packages
+      - name: build-npm-dependencies
+        if: steps.cache-npm.outputs.cache-hit != 'true'
         run: |
           cd code
           npm install
