@@ -63,6 +63,7 @@
         public function down(): void
         {
             Schema::dropIfExists( 'image_versions' );
+            Schema::dropIfExists( 'image_version_categories' );
         }
     };
 ?>
