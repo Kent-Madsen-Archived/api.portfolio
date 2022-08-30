@@ -1,7 +1,5 @@
 name: Build Dependencies
 on:
-  push:
-    branches: [ "development" ]
   pull_request:
     branches: [ "publish" ]
 jobs:
