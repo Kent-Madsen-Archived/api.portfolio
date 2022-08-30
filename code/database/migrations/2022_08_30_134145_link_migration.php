@@ -16,6 +16,7 @@
         public function down()
         {
             //
+            Schema::dropIfExists( 'links' );
         }
     };
 ?>

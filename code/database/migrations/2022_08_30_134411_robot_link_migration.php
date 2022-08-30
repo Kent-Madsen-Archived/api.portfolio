@@ -15,7 +15,7 @@
 
         public function down(): void
         {
-
+            Schema::dropIfExists( 'robot_links' );
         }
     };
 ?>

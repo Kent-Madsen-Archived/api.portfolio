@@ -15,6 +15,7 @@
         public function down(): void
         {
             //
+            Schema::dropIfExists( 'image_versions' );
         }
     };
 ?>

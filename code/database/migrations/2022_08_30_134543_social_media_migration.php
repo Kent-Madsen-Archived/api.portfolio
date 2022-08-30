@@ -15,6 +15,7 @@
         public function down(): void
         {
             //
+            Schema::dropIfExists( 'social_media_links' );
         }
     };
 ?>

@@ -16,7 +16,7 @@
         public function down(): void
         {
             //
-            Schema::dropIfExists( 'accounts' );
+            Schema::dropIfExists( 'gallery' );
         }
     };
 ?>

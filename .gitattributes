@@ -29,7 +29,7 @@
 .env diff=env eol=lf
 
 #
-*.sh diff=sh eol=lf
+*.sh diff=bash eol=lf
 
 #
 Vagrantfile diff=auto eol=lf
