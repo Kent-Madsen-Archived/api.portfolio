@@ -9,15 +9,16 @@
 
         public function up(): void
         {
-            Schema::create('password_resets',
-                function( Blueprint $table )
+            //
+            Schema::create( 'person_emails',
+                function ( Blueprint $table )
                 {
-                    $table->string( 'email' )
-                          ->index();
+                    $table->id( 'identity' );
 
-                    $table->string( 'token' );
+                    $table->string( 'content' )
+                          ->unique();
 
-                    $table->timestamp( 'created_at' )
+                    $table->json( 'attributes' )
                           ->nullable();
                 }
             );
@@ -26,7 +27,8 @@
 
         public function down(): void
         {
-            Schema::dropIfExists( 'password_resets' );
+            //
+            Schema::dropIfExists( 'person_emails' );
         }
     };
 ?>

@@ -6,15 +6,15 @@
 
     return new class extends Migration
     {
-        public function up()
+        public function up(): void
         {
             Schema::create( 'accounts',
                 function ( Blueprint $table )
                 {
-                    $table->id();
-                    $table->string( 'name' );
+                    $table->id( 'identity' );
 
-                    $table->string( 'email' )
+                    $table->bigInteger( 'email_identity' )
+                          ->unsigned()
                           ->unique();
 
                     $table->timestamp( 'email_verified_at' )
@@ -22,12 +22,17 @@
 
                     $table->string( 'password' );
                     $table->rememberToken();
+
                     $table->timestamps();
+
+                    $table->foreign( 'email_identity' )
+                          ->references( 'identity' )
+                          ->on( 'person_emails' );
                 }
             );
         }
 
-        public function down()
+        public function down(): void
         {
             Schema::dropIfExists( 'accounts' );
         }
