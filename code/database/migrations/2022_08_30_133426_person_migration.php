@@ -10,7 +10,7 @@
         public function up(): void
         {
             //
-             Schema::create( 'image',
+             Schema::create( 'person_name',
                 function ( Blueprint $table )
                 {
                     $table->id();

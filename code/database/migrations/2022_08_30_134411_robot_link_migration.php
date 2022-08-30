@@ -9,7 +9,7 @@
 
         public function up(): void
         {
-             Schema::create( 'image',
+             Schema::create( 'robot_links',
                 function ( Blueprint $table )
                 {
                     $table->id();

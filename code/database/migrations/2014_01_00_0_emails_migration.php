@@ -18,7 +18,8 @@
                     $table->string( 'content' )
                           ->unique();
 
-                    $table->json( 'attributes' );
+                    $table->json( 'attributes' )
+                          ->nullable();
                 }
             );
         }

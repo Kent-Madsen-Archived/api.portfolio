@@ -10,10 +10,12 @@
         public function up()
         {
             //
-             Schema::create( 'image',
+             Schema::create( 'links',
                 function ( Blueprint $table )
                 {
                     $table->id();
+                    $table->string('content')->unique();
+                    $table->json('attributes')->nullable();
 
                 }
             );
