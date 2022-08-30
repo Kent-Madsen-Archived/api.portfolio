@@ -4,10 +4,12 @@
 
 *.scss diff=scss eol=lf
 *.css diff=css eol=lf
+
 *.html diff=html eol=lf
-*.md diff=markdown eol=crlf
 *.php diff=php eol=lf
 *.js diff=auto eol=lf
+
+*.md diff=markdown eol=crlf
 
 *.json diff=json eol=lf
 *.yml diff=yml eol=lf
