@@ -1,18 +1,27 @@
 * text=auto
 
-*.blade.php diff=html eol=lf
 
+# Frontend
 *.scss diff=scss eol=lf
 *.css diff=css eol=lf
 
 *.html diff=html eol=lf
-*.php diff=php eol=lf
 *.js diff=auto eol=lf
 
+# Backend
+*.php diff=php eol=lf
+*.blade.php diff=html eol=lf
+
+# Documentation
 *.md diff=markdown eol=crlf
 
+
+#
 *.json diff=json eol=lf
 *.yml diff=yml eol=lf
+
+#
+*.sh diff=sh eol=lf
 
 Vagrantfile diff=auto eol=lf
 
