@@ -8,26 +8,21 @@
     {
         public function up(): void
         {
-            Schema::create( 'accounts',
+            //
+             Schema::create( 'social_media_links',
                 function ( Blueprint $table )
                 {
                     $table->id( 'identity' );
 
-                    $table->bigInteger( 'email_identity' )
-                          ->unsigned()
-                          ->unique();
+                    $table->bigInteger( 'link_id' )
+                          ->unsigned();
 
-                    $table->timestamp( 'email_verified_at' )
+                    $table->json( 'attributes' )
                           ->nullable();
 
-                    $table->string( 'password' );
-                    $table->rememberToken();
-
-                    $table->timestamps();
-
-                    $table->foreign( 'email_identity' )
+                    $table->foreign( 'link_id' )
                           ->references( 'identity' )
-                          ->on( 'person_emails' );
+                          ->on( 'links' );
                 }
             );
         }
@@ -35,7 +30,8 @@
 
         public function down(): void
         {
-            Schema::dropIfExists( 'accounts' );
+            //
+            Schema::dropIfExists( 'social_media_links' );
         }
     };
 ?>

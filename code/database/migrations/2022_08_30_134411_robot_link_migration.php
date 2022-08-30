@@ -6,28 +6,23 @@
 
     return new class extends Migration
     {
+
         public function up(): void
         {
-            Schema::create( 'accounts',
+             Schema::create( 'robot_links',
                 function ( Blueprint $table )
                 {
                     $table->id( 'identity' );
 
-                    $table->bigInteger( 'email_identity' )
-                          ->unsigned()
-                          ->unique();
+                    $table->bigInteger( 'link_id' )
+                          ->unsigned();
 
-                    $table->timestamp( 'email_verified_at' )
+                    $table->json( 'rules' )
                           ->nullable();
 
-                    $table->string( 'password' );
-                    $table->rememberToken();
-
-                    $table->timestamps();
-
-                    $table->foreign( 'email_identity' )
+                    $table->foreign( 'link_id' )
                           ->references( 'identity' )
-                          ->on( 'person_emails' );
+                          ->on( 'links' );
                 }
             );
         }
@@ -35,7 +30,7 @@
 
         public function down(): void
         {
-            Schema::dropIfExists( 'accounts' );
+            Schema::dropIfExists( 'robot_links' );
         }
     };
 ?>
