@@ -10,7 +10,7 @@
         public function up(): void
         {
             //
-             Schema::create( 'gallery',
+             Schema::create( 'galleries',
                 function ( Blueprint $table )
                 {
                     $table->id( 'identity' );
@@ -23,7 +23,7 @@
         public function down(): void
         {
             //
-            Schema::dropIfExists( 'gallery' );
+            Schema::dropIfExists( 'galleries' );
         }
     };
 ?>

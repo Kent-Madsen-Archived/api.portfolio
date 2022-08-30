@@ -14,6 +14,15 @@
                 {
                     $table->id( 'identity' );
 
+                    $table->bigInteger( 'link_id' )
+                          ->unsigned();
+
+                    $table->json( 'attributes' )
+                          ->nullable();
+
+                    $table->foreign( 'link_id' )
+                          ->references( 'identity' )
+                          ->on( 'links' );
                 }
             );
         }
