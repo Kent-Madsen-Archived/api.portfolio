@@ -18,9 +18,8 @@
 
         protected function commands(): void
         {
-            $this->load(__DIR__.'/Commands');
-
-            require base_path('routes/console.php');
+            $this->load(__DIR__ . '/Commands' );
+            require base_path( 'routes/console.php' );
         }
     }
 ?>
