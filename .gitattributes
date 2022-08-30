@@ -26,6 +26,7 @@
 
 #
 .htaccess filter=lfs diff=lfs merge=lfs -text
+.env diff=env eol=lf
 
 #
 *.sh diff=sh eol=lf
@@ -37,5 +38,6 @@ Vagrantfile diff=auto eol=lf
 # Git
 .gitattributes diff=auto eol=lf
 .gitignore diff=auto eol=lf
+
 /.github export-ignore
 CHANGELOG.md export-ignore
