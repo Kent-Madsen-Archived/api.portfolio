@@ -15,6 +15,10 @@
                 {
                     $table->id();
 
+                    $table->string( 'content' )
+                          ->unique();
+
+                    $table->json( 'attributes' );
                 }
             );
         }
