@@ -1,10 +1,19 @@
 * text=auto
 
-*.blade.php diff=html
-*.css diff=css
-*.html diff=html
-*.md diff=markdown
-*.php diff=php
+*.blade.php diff=html eol=lf
+*.css diff=css eol=lf
+*.html diff=html eol=lf
+*.md diff=markdown eol=crlf
+*.php diff=php eol=lf
+
+*.json diff=json eol=lf
+*.yml diff=yml eol=lf
+
+Vagrantfile diff=auto eol=lf
+
+.gitattributes diff=auto eol=lf
+.gitignore diff=auto eol=lf
+.htaccess diff=auto eol=lf
 
 /.github export-ignore
 CHANGELOG.md export-ignore
