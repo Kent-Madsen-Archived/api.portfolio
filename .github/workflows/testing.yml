@@ -15,9 +15,9 @@ jobs:
         with:
           php-version: '8.1'
           extensions: intl, BCMath, ctype, fileinfo, \
-           XML, Mbstring, OpenSSL, pdo_mysql, \ 
-           mysqli, tokenizer
-          tools: composer, phpunit, pecl, phpize,
+           Mbstring, OpenSSL, pdo_mysql, tokenizer
+          tools: composer, phpunit, pecl, phpize, \
+                 symfony
 
       - uses: actions/checkout@v3
       # Build & install node js packages and PHP
