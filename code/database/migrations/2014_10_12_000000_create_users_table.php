@@ -11,9 +11,10 @@
             Schema::create( 'accounts',
                 function ( Blueprint $table )
                 {
-                    $table->id();
+                    $table->id( 'identity' );
 
-                    $table->string( 'email' )
+                    $table->bigInteger( 'email_identity' )
+                          ->unsigned()
                           ->unique();
 
                     $table->timestamp( 'email_verified_at' )
@@ -23,6 +24,10 @@
                     $table->rememberToken();
 
                     $table->timestamps();
+
+                    $table->foreign( 'email_identity' )
+                          ->references( 'identity' )
+                          ->on( 'person_emails' );
                 }
             );
         }

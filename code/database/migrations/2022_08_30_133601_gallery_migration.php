@@ -13,7 +13,7 @@
              Schema::create( 'gallery',
                 function ( Blueprint $table )
                 {
-                    $table->id();
+                    $table->id( 'identity' );
 
                 }
             );

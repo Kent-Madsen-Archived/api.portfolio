@@ -12,7 +12,7 @@
              Schema::create( 'image_versions',
                 function ( Blueprint $table )
                 {
-                    $table->id();
+                    $table->id( 'identity' );
 
                 }
             );

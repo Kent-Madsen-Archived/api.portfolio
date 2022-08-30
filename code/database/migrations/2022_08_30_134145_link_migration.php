@@ -13,7 +13,7 @@
              Schema::create( 'links',
                 function ( Blueprint $table )
                 {
-                    $table->id();
+                    $table->id( 'identity' );
 
                     $table->string( 'content' )
                           ->unique();

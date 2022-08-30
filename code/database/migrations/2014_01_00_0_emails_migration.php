@@ -10,10 +10,10 @@
         public function up(): void
         {
             //
-            Schema::create( 'emails',
+            Schema::create( 'person_emails',
                 function ( Blueprint $table )
                 {
-                    $table->id();
+                    $table->id( 'identity' );
 
                     $table->string( 'content' )
                           ->unique();
@@ -28,7 +28,7 @@
         public function down(): void
         {
             //
-            Schema::dropIfExists( 'emails' );
+            Schema::dropIfExists( 'person_emails' );
         }
     };
 ?>

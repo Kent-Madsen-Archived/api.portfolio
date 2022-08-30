@@ -12,7 +12,7 @@
              Schema::create( 'social_media_links',
                 function ( Blueprint $table )
                 {
-                    $table->id();
+                    $table->id( 'identity' );
 
                 }
             );
