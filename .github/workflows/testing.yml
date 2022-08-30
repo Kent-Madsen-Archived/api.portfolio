@@ -1,7 +1,8 @@
 name: Laravel Testing
 on:
   push:
-    branches: [ "development" ]
+    branches: [ "main", \
+                "development" ]
 
   pull_request:
     branches: [ "main", \
