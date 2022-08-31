@@ -1,70 +1,48 @@
 <?php
+    namespace App\Http\Controllers;
 
-namespace App\Http\Controllers;
+    use App\Models\PersonEmailModel;
+    use App\Http\Requests\StorePersonEmailModelRequest;
+    use App\Http\Requests\UpdatePersonEmailModelRequest;use Illuminate\Http\Response;
 
-use App\Models\PersonEmailModel;
-use App\Http\Requests\StorePersonEmailModelRequest;
-use App\Http\Requests\UpdatePersonEmailModelRequest;
 
-class PersonEmailModelController extends Controller
-{
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    class PersonEmailModelController
+        extends Controller
     {
-        //
-        return null;
-    }
+        
+        public function index(): ?Response
+        {
+            //
+            return null;
+        }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StorePersonEmailModelRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StorePersonEmailModelRequest $request)
-    {
-        //
-        return null;
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\PersonEmailModel  $personEmailModel
-     * @return \Illuminate\Http\Response
-     */
-    public function show(PersonEmailModel $personEmailModel)
-    {
-        //
-        return null;
-    }
+        public function store( StorePersonEmailModelRequest $request ): ?Response
+        {
+            //
+            return null;
+        }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdatePersonEmailModelRequest  $request
-     * @param  \App\Models\PersonEmailModel  $personEmailModel
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdatePersonEmailModelRequest $request, PersonEmailModel $personEmailModel)
-    {
-        //
-        return null;
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\PersonEmailModel  $personEmailModel
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(PersonEmailModel $personEmailModel)
-    {
-        //
-        return null;
+        public function show( PersonEmailModel $personEmailModel ): ?Response
+        {
+            //
+            return null;
+        }
+
+
+        public function update( UpdatePersonEmailModelRequest $request,
+                                PersonEmailModel $personEmailModel ): ?Response
+        {
+            //
+            return null;
+        }
+
+
+        public function destroy( PersonEmailModel $personEmailModel ): ?Response
+        {
+            //
+            return null;
+        }
     }
-}
+?>
