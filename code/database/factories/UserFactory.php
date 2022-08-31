@@ -5,13 +5,10 @@
     use Illuminate\Support\Str;
 
 
-    /**
-     * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
-     */
     class UserFactory
         extends Factory
     {
-        public function definition()
+        public function definition(): array
         {
             return
             [
@@ -23,8 +20,10 @@
             ];
         }
 
-
-        public function unverified()
+        /**
+          * @return Factory
+          */
+        public function unverified(): Factory
         {
             return $this->state(
                 function( array $attributes )

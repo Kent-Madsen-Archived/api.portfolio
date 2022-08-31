@@ -21,22 +21,33 @@
 
         protected $fillable =
         [
-            'name',
-            'email',
+            'identity',
+            'username',
+            'email_identity',
             'password',
+            'remember_token',
+
+            'email_verified_at',
+            'created_at',
+            'updated_at'
         ];
 
 
         protected $hidden =
         [
+            'email_identity',
             'password',
             'remember_token',
+            'email_verified_at',
+            'remember_token'
         ];
 
 
         protected $casts =
         [
             'email_verified_at' => 'datetime',
+            'created_at' => 'datetime',
+            'updated_at' => 'datetime',
         ];
     }
 ?>
