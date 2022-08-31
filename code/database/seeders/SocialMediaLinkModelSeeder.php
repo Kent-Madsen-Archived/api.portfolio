@@ -1,19 +1,16 @@
 <?php
+    namespace Database\Seeders;
 
-namespace Database\Seeders;
+    use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+    use Illuminate\Database\Seeder;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
 
-class SocialMediaLinkModelSeeder extends Seeder
-{
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run()
+    class SocialMediaLinkModelSeeder
+        extends Seeder
     {
-        //
+        public function run(): void
+        {
+            //
+        }
     }
-}
+?>

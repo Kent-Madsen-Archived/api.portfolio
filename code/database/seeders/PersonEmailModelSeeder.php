@@ -1,19 +1,17 @@
 <?php
+    namespace Database\Seeders;
 
-namespace Database\Seeders;
+    use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+    use Illuminate\Database\Seeder;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
 
-class PersonEmailModelSeeder extends Seeder
-{
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run()
+    class PersonEmailModelSeeder
+        extends Seeder
     {
-        //
+
+        public function run(): void
+        {
+            //
+        }
     }
-}
+?>
