@@ -1,70 +1,48 @@
 <?php
+    namespace App\Http\Controllers;
 
-namespace App\Http\Controllers;
+    use App\Models\RobotLinkModel;
+    use App\Http\Requests\StoreRobotLinkModelRequest;
+    use App\Http\Requests\UpdateRobotLinkModelRequest;
+    use Illuminate\Http\Response;
 
-use App\Models\RobotLinkModel;
-use App\Http\Requests\StoreRobotLinkModelRequest;
-use App\Http\Requests\UpdateRobotLinkModelRequest;
 
-class RobotLinkModelController extends Controller
-{
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    class RobotLinkModelController
+        extends Controller
     {
-        //
-        return null;
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreRobotLinkModelRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreRobotLinkModelRequest $request)
-    {
-        //
-        return null;
-    }
+        public function index(): ?Response
+        {
+            //
+            return null;
+        }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\RobotLinkModel  $robotLinkModel
-     * @return \Illuminate\Http\Response
-     */
-    public function show(RobotLinkModel $robotLinkModel)
-    {
-        //
-        return null;
-    }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateRobotLinkModelRequest  $request
-     * @param  \App\Models\RobotLinkModel  $robotLinkModel
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateRobotLinkModelRequest $request, RobotLinkModel $robotLinkModel)
-    {
-        //
-        return null;
-    }
+        public function store( StoreRobotLinkModelRequest $request ): ?Response
+        {
+            //
+            return null;
+        }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\RobotLinkModel  $robotLinkModel
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(RobotLinkModel $robotLinkModel)
-    {
-        //
-        return null;
+
+        public function show( RobotLinkModel $robotLinkModel ): ?Response
+        {
+            //
+            return null;
+        }
+
+        public function update( UpdateRobotLinkModelRequest $request,
+                                RobotLinkModel $robotLinkModel ): ?Response
+        {
+            //
+            return null;
+        }
+
+
+        public function destroy( RobotLinkModel $robotLinkModel ): ?Response
+        {
+            //
+            return null;
+        }
     }
-}
+?>

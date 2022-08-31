@@ -1,70 +1,47 @@
 <?php
+    namespace App\Http\Controllers;
 
-namespace App\Http\Controllers;
+    use App\Models\PersonSurnameModel;
+    use App\Http\Requests\StorePersonSurnameModelRequest;
+    use App\Http\Requests\UpdatePersonSurnameModelRequest;
+    use Illuminate\Http\Response;
 
-use App\Models\PersonSurnameModel;
-use App\Http\Requests\StorePersonSurnameModelRequest;
-use App\Http\Requests\UpdatePersonSurnameModelRequest;
 
-class PersonSurnameModelController extends Controller
-{
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    class PersonSurnameModelController
+        extends Controller
     {
-        //
-        return null;
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StorePersonSurnameModelRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StorePersonSurnameModelRequest $request)
-    {
-        //
-        return null;
-    }
+        public function index(): ?Response
+        {
+            //
+            return null;
+        }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\PersonSurnameModel  $personSurnameModel
-     * @return \Illuminate\Http\Response
-     */
-    public function show(PersonSurnameModel $personSurnameModel)
-    {
-        //
-        return null;
-    }
+        public function store( StorePersonSurnameModelRequest $request ): ?Response
+        {
+            //
+            return null;
+        }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdatePersonSurnameModelRequest  $request
-     * @param  \App\Models\PersonSurnameModel  $personSurnameModel
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdatePersonSurnameModelRequest $request, PersonSurnameModel $personSurnameModel)
-    {
-        //
-        return null;
-    }
+        public function show( PersonSurnameModel $personSurnameModel ): ?Response
+        {
+            //
+            return null;
+        }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\PersonSurnameModel  $personSurnameModel
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(PersonSurnameModel $personSurnameModel)
-    {
-        //
-        return null;
+
+        public function update( UpdatePersonSurnameModelRequest $request,
+                                PersonSurnameModel $personSurnameModel ): ?Response
+        {
+            //
+            return null;
+        }
+
+
+        public function destroy( PersonSurnameModel $personSurnameModel ): ?Response
+        {
+            //
+            return null;
+        }
     }
-}
+?>

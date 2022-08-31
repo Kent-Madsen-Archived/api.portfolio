@@ -9,7 +9,7 @@
     class PersonEmailModelController
         extends Controller
     {
-        
+
         public function index(): ?Response
         {
             //
