@@ -20,12 +20,9 @@
 *.xml diff=xml eol=lf
 *.json diff=json eol=lf
 
-#
-*.ico filter=lfs diff=lfs merge=lfs -text
-*.txt filter=lfs diff=lfs merge=lfs -text
 
 #
-.htaccess filter=lfs diff=lfs merge=lfs -text
+.htaccess diff=htaccess eol=lf
 .env diff=env eol=lf
 
 #
