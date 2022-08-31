@@ -1,0 +1,14 @@
+﻿documentations:
+  - 'docs/*'
+
+scripts:
+  - 'scripts/*'
+
+php:
+  - 'code/*'
+
+workflows:
+  - '.github/*'
+
+routes:
+  - 'code/routes/*'
