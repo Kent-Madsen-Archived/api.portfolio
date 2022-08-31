@@ -13,6 +13,9 @@
                 {
                     $table->id( 'identity' );
 
+                    $table->string( 'username' )
+                          ->unique();
+
                     $table->bigInteger( 'email_identity' )
                           ->unsigned()
                           ->unique();
