@@ -1,30 +1,23 @@
 <?php
+    namespace App\Http\Requests;
 
-namespace App\Http\Requests;
+    use Illuminate\Foundation\Http\FormRequest;
 
-use Illuminate\Foundation\Http\FormRequest;
 
-class StoreSocialMediaLinkModelRequest extends FormRequest
-{
-    /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
-    public function authorize()
+    class StoreSocialMediaLinkModelRequest
+        extends FormRequest
     {
-        return false;
-    }
+        public function authorize(): bool
+        {
+            return false;
+        }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array<string, mixed>
-     */
-    public function rules()
-    {
-        return [
-            //
-        ];
+        public function rules(): array
+        {
+            return
+            [
+                //
+            ];
+        }
     }
-}
+?>
