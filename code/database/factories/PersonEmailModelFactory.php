@@ -7,7 +7,7 @@
     class PersonEmailModelFactory
         extends Factory
     {
-        public function definition()
+        public function definition(): array
         {
             return
             [
