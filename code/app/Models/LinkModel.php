@@ -1,11 +1,13 @@
 <?php
+    namespace App\Models;
 
-namespace App\Models;
+    use Illuminate\Database\Eloquent\Factories\HasFactory;
+    use Illuminate\Database\Eloquent\Model;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 
-class LinkModel extends Model
-{
-    use HasFactory;
-}
+    class LinkModel
+        extends Model
+    {
+        use HasFactory;
+    }
+?>
