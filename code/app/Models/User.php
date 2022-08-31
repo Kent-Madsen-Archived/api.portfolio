@@ -22,6 +22,7 @@
         protected $fillable =
         [
             'identity',
+
             'username',
             'email_identity',
             'password',
@@ -36,9 +37,12 @@
         protected $hidden =
         [
             'email_identity',
+
             'password',
             'remember_token',
+
             'email_verified_at',
+
             'remember_token'
         ];
 
