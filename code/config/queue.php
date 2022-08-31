@@ -2,14 +2,12 @@
     return
     [
         'default' => env('QUEUE_CONNECTION', 'sync'),
-
         'connections' =>
         [
             'sync' =>
             [
                 'driver' => 'sync',
             ],
-
             'database' =>
             [
                 'driver' => 'database',
@@ -18,7 +16,6 @@
                 'retry_after' => 90,
                 'after_commit' => false,
             ],
-
             'beanstalkd' =>
             [
                 'driver' => 'beanstalkd',
@@ -28,7 +25,6 @@
                 'block_for' => 0,
                 'after_commit' => false,
             ],
-
             'sqs' =>
             [
                 'driver' => 'sqs',
@@ -40,7 +36,6 @@
                 'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
                 'after_commit' => false,
             ],
-
             'redis' =>
             [
                 'driver' => 'redis',
@@ -50,15 +45,12 @@
                 'block_for' => null,
                 'after_commit' => false,
             ],
-
         ],
-
         'failed' =>
         [
             'driver' => env('QUEUE_FAILED_DRIVER', 'database-uuids'),
             'database' => env('DB_CONNECTION', 'mysql'),
             'table' => 'failed_jobs',
         ],
-
     ];
 ?>
