@@ -1,14 +1,33 @@
 ﻿documentations:
-  - 'docs/*'
+  - 'docs/**/*'
 
 scripts:
-  - 'scripts/*'
+  - 'scripts/**/*'
 
 php:
-  - 'code/*'
+  - 'code/**/*'
+
+composer:
+  - 'code/composer.json'
+  - 'code/composer.lock'
+
+npm:
+  - 'code/package.json'
+  - 'code/package-lock.json'
+
 
 workflows:
-  - '.github/*'
+  - '.github/**/*'
 
 routes:
-  - 'code/routes/*'
+  - 'code/routes/**/*'
+
+databases:
+  - 'code/database/**/*'
+
+migrations:
+  - 'code/database/migrations/**/*'
+
+configurations:
+  - 'code/config/**/*'
+  - 'configuration/**/*'
