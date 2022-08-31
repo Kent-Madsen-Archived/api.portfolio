@@ -1,27 +1,25 @@
 <?php
+    namespace App\Http\Requests;
 
-namespace App\Http\Requests;
+    use Illuminate\Foundation\Http\FormRequest;
 
-use Illuminate\Foundation\Http\FormRequest;
 
-class UpdatePersonEmailModelRequest
-    extends FormRequest
-{
-
-    public function authorize(): bool
+    class UpdatePersonEmailModelRequest
+        extends FormRequest
     {
-        return false;
-    }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array<string, mixed>
-     */
-    public function rules()
-    {
-        return [
-            //
-        ];
+        public function authorize(): bool
+        {
+            return false;
+        }
+
+
+        public function rules(): array
+        {
+            return
+            [
+                //
+            ];
+        }
     }
-}
+?>
