@@ -2,7 +2,6 @@
     return
     [
         'default' => env('FILESYSTEM_DISK', 'local'),
-
         'disks' =>
         [
             'local' =>
@@ -11,7 +10,6 @@
                 'root' => storage_path('app'),
                 'throw' => false,
             ],
-
             'public' =>
             [
                 'driver' => 'local',
@@ -20,7 +18,6 @@
                 'visibility' => 'public',
                 'throw' => false,
             ],
-
             's3' =>
             [
                 'driver' => 's3',
@@ -34,7 +31,6 @@
                 'throw' => false,
             ],
         ],
-
         'links' =>
         [
             public_path('storage') => storage_path('app/public'),
