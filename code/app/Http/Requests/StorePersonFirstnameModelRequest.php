@@ -3,7 +3,7 @@
 
     use Illuminate\Foundation\Http\FormRequest;
 
-    
+
     class StorePersonFirstnameModelRequest
         extends FormRequest
     {
