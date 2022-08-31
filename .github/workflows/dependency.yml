@@ -5,6 +5,11 @@ on:
                 "development", \
                 "testing", \
                 "publish" ]
+  push:
+    branches: [ "main", \
+                "development", \
+                "testing", \
+                "publish" ]
 permissions:
   contents: read
 jobs:
