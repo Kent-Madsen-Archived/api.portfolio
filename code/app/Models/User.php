@@ -45,9 +45,16 @@
 
         protected $casts =
         [
+            'identity' => 'integer',
+            'username' => 'string',
+            'password' => 'string',
+
+            'email_identity' => 'integer',
+            'remember_token' => 'string',
+
             'email_verified_at' => 'datetime',
-            'created_at' => 'datetime',
-            'updated_at' => 'datetime',
+            'created_at'        => 'datetime',
+            'updated_at'        => 'datetime',
         ];
     }
 ?>
