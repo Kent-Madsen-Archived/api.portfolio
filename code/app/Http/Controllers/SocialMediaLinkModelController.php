@@ -16,6 +16,7 @@ class SocialMediaLinkModelController extends Controller
     public function index()
     {
         //
+        return null;
     }
 
     /**
@@ -27,6 +28,7 @@ class SocialMediaLinkModelController extends Controller
     public function store(StoreSocialMediaLinkModelRequest $request)
     {
         //
+        return null;
     }
 
     /**
@@ -38,6 +40,7 @@ class SocialMediaLinkModelController extends Controller
     public function show(SocialMediaLinkModel $socialMediaLinkModel)
     {
         //
+        return null;
     }
 
     /**
@@ -50,6 +53,7 @@ class SocialMediaLinkModelController extends Controller
     public function update(UpdateSocialMediaLinkModelRequest $request, SocialMediaLinkModel $socialMediaLinkModel)
     {
         //
+        return null;
     }
 
     /**
@@ -61,5 +65,6 @@ class SocialMediaLinkModelController extends Controller
     public function destroy(SocialMediaLinkModel $socialMediaLinkModel)
     {
         //
+        return null;
     }
 }

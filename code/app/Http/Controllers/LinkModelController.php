@@ -16,6 +16,7 @@ class LinkModelController extends Controller
     public function index()
     {
         //
+        return null;
     }
 
     /**
@@ -27,6 +28,7 @@ class LinkModelController extends Controller
     public function store(StoreLinkModelRequest $request)
     {
         //
+        return null;
     }
 
     /**
@@ -38,6 +40,7 @@ class LinkModelController extends Controller
     public function show(LinkModel $linkModel)
     {
         //
+        return null;
     }
 
     /**
@@ -50,6 +53,7 @@ class LinkModelController extends Controller
     public function update(UpdateLinkModelRequest $request, LinkModel $linkModel)
     {
         //
+        return null;
     }
 
     /**
@@ -61,5 +65,6 @@ class LinkModelController extends Controller
     public function destroy(LinkModel $linkModel)
     {
         //
+        return null;
     }
 }

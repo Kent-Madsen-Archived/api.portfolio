@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ImageModel;
 use App\Http\Requests\StoreImageModelRequest;
 use App\Http\Requests\UpdateImageModelRequest;
+use Illuminate\Http\Response;
 
 class ImageModelController extends Controller
 {
@@ -13,9 +14,10 @@ class ImageModelController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(): ?Response
     {
         //
+        return null;
     }
 
     /**
@@ -27,6 +29,7 @@ class ImageModelController extends Controller
     public function store(StoreImageModelRequest $request)
     {
         //
+        return null;
     }
 
     /**
@@ -38,6 +41,7 @@ class ImageModelController extends Controller
     public function show(ImageModel $imageModel)
     {
         //
+        return null;
     }
 
     /**
@@ -50,6 +54,7 @@ class ImageModelController extends Controller
     public function update(UpdateImageModelRequest $request, ImageModel $imageModel)
     {
         //
+        return null;
     }
 
     /**
@@ -61,5 +66,6 @@ class ImageModelController extends Controller
     public function destroy(ImageModel $imageModel)
     {
         //
+        return null;
     }
 }

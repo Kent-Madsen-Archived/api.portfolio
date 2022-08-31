@@ -16,6 +16,7 @@ class PersonSurnameModelController extends Controller
     public function index()
     {
         //
+        return null;
     }
 
     /**
@@ -27,6 +28,7 @@ class PersonSurnameModelController extends Controller
     public function store(StorePersonSurnameModelRequest $request)
     {
         //
+        return null;
     }
 
     /**
@@ -38,6 +40,7 @@ class PersonSurnameModelController extends Controller
     public function show(PersonSurnameModel $personSurnameModel)
     {
         //
+        return null;
     }
 
     /**
@@ -50,6 +53,7 @@ class PersonSurnameModelController extends Controller
     public function update(UpdatePersonSurnameModelRequest $request, PersonSurnameModel $personSurnameModel)
     {
         //
+        return null;
     }
 
     /**
@@ -61,5 +65,6 @@ class PersonSurnameModelController extends Controller
     public function destroy(PersonSurnameModel $personSurnameModel)
     {
         //
+        return null;
     }
 }

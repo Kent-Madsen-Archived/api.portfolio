@@ -16,6 +16,7 @@ class RobotLinkModelController extends Controller
     public function index()
     {
         //
+        return null;
     }
 
     /**
@@ -27,6 +28,7 @@ class RobotLinkModelController extends Controller
     public function store(StoreRobotLinkModelRequest $request)
     {
         //
+        return null;
     }
 
     /**
@@ -38,6 +40,7 @@ class RobotLinkModelController extends Controller
     public function show(RobotLinkModel $robotLinkModel)
     {
         //
+        return null;
     }
 
     /**
@@ -50,6 +53,7 @@ class RobotLinkModelController extends Controller
     public function update(UpdateRobotLinkModelRequest $request, RobotLinkModel $robotLinkModel)
     {
         //
+        return null;
     }
 
     /**
@@ -61,5 +65,6 @@ class RobotLinkModelController extends Controller
     public function destroy(RobotLinkModel $robotLinkModel)
     {
         //
+        return null;
     }
 }

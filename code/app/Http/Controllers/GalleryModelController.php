@@ -16,6 +16,7 @@ class GalleryModelController extends Controller
     public function index()
     {
         //
+        return null;
     }
 
     /**
@@ -27,6 +28,7 @@ class GalleryModelController extends Controller
     public function store(StoreGalleryModelRequest $request)
     {
         //
+        return null;
     }
 
     /**
@@ -38,6 +40,7 @@ class GalleryModelController extends Controller
     public function show(GalleryModel $galleryModel)
     {
         //
+        return null;
     }
 
     /**
@@ -50,6 +53,7 @@ class GalleryModelController extends Controller
     public function update(UpdateGalleryModelRequest $request, GalleryModel $galleryModel)
     {
         //
+        return null;
     }
 
     /**
@@ -61,5 +65,6 @@ class GalleryModelController extends Controller
     public function destroy(GalleryModel $galleryModel)
     {
         //
+        return null;
     }
 }

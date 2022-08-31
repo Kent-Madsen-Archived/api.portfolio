@@ -16,6 +16,7 @@ class PersonEmailModelController extends Controller
     public function index()
     {
         //
+        return null;
     }
 
     /**
@@ -27,6 +28,7 @@ class PersonEmailModelController extends Controller
     public function store(StorePersonEmailModelRequest $request)
     {
         //
+        return null;
     }
 
     /**
@@ -38,6 +40,7 @@ class PersonEmailModelController extends Controller
     public function show(PersonEmailModel $personEmailModel)
     {
         //
+        return null;
     }
 
     /**
@@ -50,6 +53,7 @@ class PersonEmailModelController extends Controller
     public function update(UpdatePersonEmailModelRequest $request, PersonEmailModel $personEmailModel)
     {
         //
+        return null;
     }
 
     /**
@@ -61,5 +65,6 @@ class PersonEmailModelController extends Controller
     public function destroy(PersonEmailModel $personEmailModel)
     {
         //
+        return null;
     }
 }
